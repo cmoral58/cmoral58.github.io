@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background: url(../background/fotis-fotopoulos.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.right {
+    padding: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered h2 {
+    color: #000;
+    font-size: 2em;
+    text-align: left;
+}
+
+.centered h2 span {
+    font-size: 2em;
+    color: inherit;
+}
+
+.centered p {
+    font-size: 1em;
+    color: #000;
+}
+
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Position the navbar container inside the image */
+
+.container {
+    position: relative;
+    /* margin: 20px; */
+    width: auto;
+}
+
+
+/* The navbar */
+
+.topnav {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    float: right;
+}
+
+
+/* Navbar links */
+
+.topnav a {
+    /* float: left; */
+    float: right;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #333;
+    color: inherit;
+}
+
+@media (max-width: 770px) {
+    body {
+        display: table;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .split {
+        min-height: 100%;
+        display: table;
+    }
+    .left {
+        /*margin:auto;*/
+        text-align:center;
+        display: table-column;
+        height: 50%;
+        width:100%;
+    }
+    .right {
+        /*margin:auto;*/
+        background: url(../background/fotis-fotopoulos.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align:center;
+        display: table-column;
+        height: 50%;
+        width:100%;
+    }
+    .right h2 {
+        font-size: 1em;
+        color: #fff;
+    }
+    .right p {
+        color: #fff;
+    }
+    .topnav {
+        background: transparent;
+    }
+    .topnav a {
+        font-size: 14px;
+        color: #fff;
+    }
+    .footer {
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        background: transparent;
+    }
+    .footer p {
+        color: #fff;
+    }
+}
+@media (max-width: 1080px) {
+    .centered img {
+        width: 99%;
+        height: 99%;
+    }
+}
