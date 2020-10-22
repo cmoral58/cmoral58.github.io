@@ -1,57 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Cesar | Portfolio</title>
+    <link rel="icon" type="image/png" href="Images/undraw_male_avatar.png"/>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
 
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+    <!-- UiKit css & js link -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+</head>
 <body>
-    <div class="split left">
-        <div class="centered">
-            <img src="../background/transparentLogo.png">
+    <nav id="navbar" class="uk-navbar-container uk-margin" uk-navbar>
+
+        <div id="nav" class="uk-navbar-center">
+            <div id="nav-left" class="uk-navbar-center-left"><div>
+                <ul class="uk-navbar-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div></div>
+            <div id="nav-right" class="uk-navbar-center-right"><div>
+                <ul class="uk-navbar-nav">
+                    <li><a href="#planning">Planning</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div></div>
+        </div>
+    </nav>
+    <nav id="nav-menu" class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <a href="#offcanvas-slide" class="uk-button uk-button-default" uk-toggle uk-icon="icon: menu"></a>
+
+                <div id="offcanvas-slide" uk-offcanvas>
+                    <div class="uk-offcanvas-bar">
+
+                        <ul class="uk-nav uk-nav-default">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#planning">Planning</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+
+    <div id="home" class="uk-section uk-section-xlarge uk-section-default">
+        <div class="uk-container">
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div class="uk-grid-item-match">
+                    <div class="uk-card uk-card-body">
+                        <a href="https://iconscout.com/illustrations/office-workplace" target="_blank"><img src="Images/office-workplace.png" alt="Office workplace Illustration by Delesign Graphics"></a>
+                    </div>
+                 </div>
+                <div>
+                    <h3>Hello, I'm Cesar</h3>
+                    <p>
+                        I'm a front-end developer, Web/App UI designer and App developer
+                    </p>
+                    <a id="button" href="#about"><button><span class="uk-margin-small-right" uk-icon="chevron-down"></span>Learn More</button></a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="split right">
-        <div class="centered">
-            <h2>Hello I'm<br><span>Cesar Morales</span></h2>
-            <p>Front End Developer. Main languages: Python, HTML, CSS, Javascript, C/C++</p>
-            <ul class="sci">
-                <li>
-                    <a href="https://iconscout.com/contributors/icon-mafia"><img src="../Languages/html.png"></a>
-                </li>
-                <li>
-                    <a href="https://iconscout.com/contributors/pixel-icons" target="_blank"><img src="../Languages/css.png"></a>
-                </li>
-                <li>
-                    <a href="https://iconscout.com/contributors/maninderkaur" target="_blank"><img src="../Languages/javascript.png"></a>
-                </li>
-                <li>
-                    <a href="https://iconscout.com/contributors/icons8"><img src="../Languages/python.png"></a>
-                </li>
-                <li>
-                    <a href="https://iconscout.com/contributors/icon-mafia"><img src="../Languages/c-programming.png"></a>
-                </li>
-                <li>
-                    <a href="https://iconscout.com/contributors/icon-mafia" target="_blank"><img src="../Languages/c.png"></a>
-                </li>
-            </ul>
+    <!-- About section -->
+    <div id="about" class="uk-section uk-section-large uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div>
+                    <h1>hello.<br><span>I'm Cesar, a UI designer and front-end developer based in Texas.
+                        I began to code near the end of 2019 and started off learning web development.
+                        Since then I've been expanding my programming knowledge to build web apps, web scrapers,
+                        web servers, and other simple programs.</span></h1>
+        
+                    <address><a href="mailto:programmingrequests@gmail.com" class="uk-icon-link uk-margin-small-right" uk-icon="mail">Want to work with me? Feel free to contact me    </a></address>        
+                </div>
+
+                <div class="uk-grid-item-match">
+                    <div class="uk-card uk-card-body">
+                        <a href="https://iconscout.com/illustrations/working-with-laptop" target="_blank"><img src="Images/working-with-laptop.png" alt="Working With Laptop Illustration by Manypixels Gallery"></a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
         </div>
-        <div class="container">
-            <div class="topnav">
-                <a href="contact.html">Contact</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="index.html">Home</a>
+    </div>
+
+    <!-- Planning section -->
+    <div id="planning" class="uk-section uk-section-large uk-section-default">
+        <div class="uk-container">
+    
+            <h3>Planning</h3>
+            <p>Listed below are the steps I take to complete a project</p>
+            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body"><img id="icons" src="Icons/research.png"><br>
+                        <p>Research the tools needed<br><br></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body"><img id="icons" src="Icons/planning-process.png"><br>
+                        <p>Plan/Map the project out<br><br></p></div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body"><img id="icons" src="Icons/sketch.png"><br>
+                        <p>Design a mockup of the project<br><br></p></div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body"><img id="icons" src="Icons/repair.png"><br>
+                        <p>Develop/Program the UI<br><br></p></div>
+                </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Images from <a href="https://unsplash.com/s/photos/code">unSplash</a></p>
+    </div>
+
+    <!-- Projects section -->
+    <div id="projects" class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <h3>Current Project</h3>
+            <div class="uk-child-width-expand@s uk-grid" uk-grid="">
+                <div style="background-color: transparent; box-shadow: none;" class="uk-grid-item-match uk-first-column">
+                    <div style="background-color: transparent; box-shadow: none;" class="uk-card uk-card-default uk-card-body">
+                        <img id="screens" src="Projects/HomeAndWelcomeScreen.png">
+        
+                    </div>
+                </div>
+        
+        
+                <div>
+                    <h3 style="font-family: 'Poppins';"><span style="font-size: 40px; font-weight: 600;">Studily</span> <span style="font-size: 18px; font-weight: 400; font-style: italic; color: #999;">(Available for download soon)</span></h3>
+                    <p>
+                        Studily is an application made for students created by students. This application will be to combat student issues like <span style="font-weight: 700; font-style: italic;">disorganization, failing to manage money, inability to stay healthy/active, poor academic achievements, poor sleeping habits, and procrastination.</span>
+                    </p>
+
+                    <a class="uk-button uk-button-default" href="#modal-full" uk-toggle>Learn More</a>
+                    <address><a href="https://github.com/cmoral58/Studily-Sqflite-Login" class="uk-icon-link uk-margin-small-right" uk-icon="github" target="blank">Link to project repository    </a></address>
+
+                </div>
+            </div>
+            <div id="modal-full" class="uk-modal-full" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                        <div class="uk-background-cover" style="background-color: white;" uk-height-viewport>
+                            <div style="background-color: transparent; box-shadow: none;" class="uk-grid-item-match uk-first-column">
+                                <div style="background-color: transparent; box-shadow: none;" class="uk-card uk-card-default uk-card-body">
+                                    <img id="screens" src="Projects/HomeAndWelcomeScreen.png">
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-padding-large">
+                            <h1>Studily | App for students</h1>
+                            <p>
+                                Studily is an application made for students created by students. This application will be to combat student issues like <span style="font-weight: 700; font-style: italic;">disorganization, failing to manage money, inability to stay healthy/active, poor academic achievements, poor sleeping habits, and procrastination.</span>
+                            </p>
+                            <br>
+                            <br>
+                            <h2>Explanation for project</h3>
+                            <p>
+                                Ensuring healthy lives and promoting well-being at all ages is essential to sustainable development. With <span style="font-weight: 700;">Studily</span>, students will be able to better maintain their physical and mental health. Students have several issues in their time in school and outside of it, ranging from them being
+                                unable to manage money, not being organized, having poor grades, having poor sleep and eating
+                                habits, and procrastination. My investigation method will include an app in which select students will be able to track such
+                                problems (i.e. track their budget, organize their tasks, etc.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
 </html>
+

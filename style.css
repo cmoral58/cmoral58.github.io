@@ -1,219 +1,87 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 body {
-    font-family: 'Poppins', sans-serif;
-    color: white;
+	font-family: 'Poppins', sans-serif !important;
 }
 
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-.split.left .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.left {
-    left: 0;
-    background: url(../background/safar-safarov.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-}
-.split.right .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.right {
-    padding: 0;
-    right: 0;
-    background-color: #fff;
+#home h1.header {
+	top: 50%;
+	left: 50%;
 }
 
-/*.centered {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    text-align: center;*/
-/*}*/
-
-.centered h2 {
-    color: #000;
-    font-size: 2em;
-    text-align: left;
+#button button {
+	background: none;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px;
 }
 
-.centered h2 span {
-    font-size: 2em;
-    color: inherit;
+#button button:hover {
+	cursor: pointer;
 }
 
-.centered p {
-    font-size: 1em;
-    color: #000;
+#navbar {
+	position: fixed !important;
+	left: 50%;
+	color: #000 !important;
+	font-weight: bold;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	z-index: 1;
 }
 
-
-/* Footer */
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
+#navbar ul li a:hover {
+	background: transparent;
 }
 
-.footer a {
-    text-decoration: none;
-    color: inherit;
+#nav-menu {
+	color: #000 !important;
+	font-weight: bold;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border: none !important;
+	z-index: 1;
+	position: fixed !important;
 }
 
-
-/* ul */
-
-.sci {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    padding-left: 100px;
-    align-items: center;
+#nav-menu a {
+	padding-top: 15px;
+	border: none;
 }
 
-.sci li {
-    list-style: none;
-    position: relative;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 1px;
+#about {
+	background: #f3f6ff;
 }
 
-.sci li img {
-    position: relative;
-    display: grid;
-    place-items: center;
-    max-width: 100px;
-    width: 50px;
-    height: 50px;
-    border: #000;
-    text-decoration: none;
-    margin: 10px 0 0;
+#about span {
+	font-size: 1.3rem;
 }
 
-
-/* Position the navbar container inside the image */
-
-.container {
-    position: relative;
-    /* margin: 20px; */
-    width: auto;
+#about address a {
+	line-height: 1.2;
 }
 
-
-/* The navbar */
-
-.topnav {
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-    float: right;
+#icons {
+	height: 80px;
+	width: 80px;
 }
 
-
-/* Navbar links */
-
-.topnav a {
-    /* float: left; */
-    float: right;
-    color: #000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+#projects {
+	background: #f3f6ff;
 }
 
-.topnav a:hover {
-    background-color: #333;
-    color: inherit;
+.uk-button.uk-button-default {
+	border-radius: 10px;
+	border: 1px solid #000;
 }
 
-@media (max-width: 770px) {
-    body {
-        display: table;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    .split {
-        min-height: 100%;
-        display: table;
-    }
-    .left {
-        /*margin:auto;*/
-        text-align:center;
-        display: table-column;
-        height: 50%;
-        width:100%;
-    }
-    .right {
-        background: url(../background/safar-safarov.jpg);
-        background-size: cover;
-        background-position: center;
-        text-align:center;
-        display: table-column;
-        height: 50%;
-        width:100%;
-    }
-    .right h2 {
-        font-size: 1em;
-        color: #fff;
-    }
-    .right p {
-        color: #fff;
-    }
-    .topnav {
-        background: transparent;
-    }
-    .topnav a {
-        font-size: 14px;
-        color: #fff;
-    }
-    .footer {
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-        background: transparent;
-    }
-    .footer p {
-        color: #fff;
-    }
-    .sci {
-        padding-left: 0;
-    }
-    .sci li img {
-        max-width: 40px;
-        max-height: 40px;
-        width: 30px;
-        height: 30px;
-    }
+#modal-full .uk-background-cover {
+	background-size: 350px 700px;
 }
-@media (max-width: 1080px) {
-    .centered img {
-        width: 99%;
-        height: 99%;
-    }
+
+@media only screen and (max-width: 420px) {
+	#nav-left,
+	#nav-right {
+		display: none;
+	}
 }
